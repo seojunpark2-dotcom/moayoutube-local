@@ -1,2 +1,38 @@
-# moayoutube-local
-모아드롭 Windows 로컬 실행 프로그램 배포
+# 모아드롭 · Windows 로컬 실행
+
+[Windows x64 실행 ZIP 다운로드](https://github.com/seojunpark2-dotcom/moayoutube-local/releases/latest/download/moayoutube-local-windows-x64.zip) · [웹사이트](https://moayoutube.vercel.app)
+
+1. ZIP 파일 **전체를 압축 해제**합니다.
+2. **모아드롭 실행.cmd**를 더블클릭합니다. Node.js·Python·FFmpeg는 포함되어 있어 별도 설치하지 않습니다.
+3. 자동으로 열리는 로컬 화면에서 URL을 입력하고 MP4 또는 MP3를 선택합니다.
+4. 종료하려면 화면의 **프로그램 종료** 또는 실행 창에서 Ctrl+C를 누릅니다.
+
+기본 주소는 http://127.0.0.1:47831/ 입니다. ZIP 안에서 직접 실행하지 마세요. 파일 처리 중 실행 창을 닫으면 작업이 중단됩니다.
+
+프로그램이 실행 중이면 공개 웹사이트에서 **내 PC 연결하기**를 눌러 사용할 수도 있습니다. Chrome·Edge가 로컬 네트워크 접근을 요청하면 허용해 주세요. 브라우저 연결이 제한되면 자동으로 열린 로컬 화면에서 이용하세요.
+
+## 처리 위치와 지원 범위
+
+각 사용자의 PC와 인터넷으로 원본을 받고 변환합니다. 운영자 PC나 Render 변환 서버를 사용하지 않습니다. Windows x64용이며 모바일·macOS 실행 파일은 현재 제공하지 않습니다. 웹사이트 방문만으로 PC 프로그램이 자동 실행되지는 않습니다.
+
+본인이 소유하거나 다운로드 권한을 가진 콘텐츠, 다운로드가 허용된 소스에 사용하세요. 비공개·인증·DRM·접근 제한을 우회하지 않습니다. YouTube의 네트워크 제한이나 원본 상태에 따라 실패할 수 있으므로 모든 영상의 성공을 보장하지 않습니다. 비트레이트를 높여도 원본 음질이 향상되지는 않습니다.
+
+프로그램과 변환에는 PC의 CPU·저장 공간·인터넷을 사용합니다. 여유 공간 10GiB 이상을 권장합니다. 작업 파일은 프로그램 폴더의 `.data/jobs`에 최대 24시간·2GiB 예산으로 보관합니다. 사용한 폴더를 타인에게 전달하지 마세요. 공식 ZIP에는 생성한 샘플만 포함합니다.
+
+## 연결 보호
+
+로컬 API는 `127.0.0.1:47831`에만 바인딩하며, Host·Origin 검사와 실행마다 새로 생성되는 세션 토큰, 2분 유효 일회용 파일 다운로드 표를 사용합니다. 세션 토큰은 브라우저 메모리에 보관합니다. 브라우저 로그인 정보나 계정 쿠키를 읽지 않습니다.
+
+## 라이선스와 소스
+
+이 저장소는 실행 패키지 배포용입니다. 애플리케이션 백엔드 JavaScript는 ZIP 안의 `server` 폴더에서 확인할 수 있습니다. 원본 프로젝트 저장소는 비공개이며, 소스 공개 범위는 이 실행 패키지에 포함된 파일입니다.
+
+제3자 구성 요소에는 각각의 라이선스가 적용됩니다. ZIP의 `LICENSES` 폴더, Python의 `LICENSE.txt`, 각 의존성의 라이선스 파일을 확인하세요. 특히 FFmpeg 실행 파일은 GPL 조건을 따릅니다.
+
+- [Node.js 소스 및 라이선스](https://github.com/nodejs/node)
+- [Python 소스 및 라이선스](https://www.python.org/downloads/source/)
+- [yt-dlp 소스 및 라이선스](https://github.com/yt-dlp/yt-dlp)
+- [FFmpeg 소스](https://github.com/FFmpeg/FFmpeg) · [배포 빌드](https://www.gyan.dev/ffmpeg/builds/)
+- [ffprobe-static 배포 정보](https://github.com/joshwnj/ffprobe-static)
+
+릴리스의 `SHA256SUMS.txt`로 ZIP 무결성을 확인할 수 있습니다.
